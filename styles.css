@@ -1,0 +1,580 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --font : 13px;
+    --padding : 5px;
+    --border-radius : 7px;
+    --border : none;
+    --cursor : pointer;
+    --button-background : #0d6efd;
+}
+body{
+    background-color: white;
+    transition: 1.5s;
+}
+
+                         /* navigation Styling */
+
+                         
+#container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+#navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    position: relative;
+    background: black;
+    transition: 1.5s;
+}
+#logo{
+    font-size: var(--font);
+    color: white;
+}
+.navigationElements{
+    margin: 0 50px;
+}
+#navigationOptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 42%;
+    margin-right: -1px;
+}
+#navigationOptions :last-child{
+    margin-left: 40px;
+}
+#button1{
+    display: block;
+    transition: 1.5s;
+}
+#button2{
+    display: none;
+    transition: 1.5s;
+}
+.changeButtons{
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: none;
+    outline: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+#navigationOptions li{
+    list-style-type: none;
+    cursor: var(--cursor);
+    font-size: var(--font);
+    position: relative;
+    padding: 16px;
+    color: white;
+}
+#navigationOptions li:hover{
+    color: var(--button-background);
+}
+#navigationOptions li::before{
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background: var(--button-background);
+    height: 10%;
+    width: 100%;
+    border-radius: var(--border-radius);
+    transition-duration: 0.6s;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    z-index: 10;
+}
+#navigationOptions li:hover::before{
+    transform: scaleX(1);
+}
+.donate{
+    font-size: 13px;
+    width: 120px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    cursor: var(--cursor);
+    background: var(--button-background);
+    color: white;
+    transition: 1s;
+    text-transform: uppercase;
+}
+.donate:hover{
+    background-color: green;
+}
+.hoveringOptions{
+    position: absolute;
+    top: 51px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(85, 78, 78, 0.808);
+    transition: 1s;
+    display: none;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    outline: none;
+    place-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+#appealsSection{
+    left: 52%;
+    height: 380px;
+}
+#causeSection{
+    left: 60%;
+    height: 300px;
+}
+#religiousSection{
+    left: 70%;
+    height: 280px;
+}
+#abooutSection{
+    left: 78%;
+    height: 200px;
+}
+
+#appealsSection , #causeSection,#religiousSection,#abooutSection h6{
+    text-transform: capitalize;
+    cursor: var(--cursor);
+}
+h6{
+    color: black;
+    font-weight: 100;
+    font-size: 16px;
+}
+h6:hover{
+    color: var(--button-background);
+
+}
+.paraDetail{
+    color: gray;
+}
+
+         /* Home Section styling */
+
+#homeSection{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+#homeSection img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 2s;
+}
+
+
+
+
+           /* pattion Styling */
+
+
+
+#pattion{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}           
+#hadees{
+    position: absolute;
+    left: 46%;
+    top: 41%;
+    width: 46%;
+    color: black;
+    font-size: 44px;
+    font-style: italic;
+    backdrop-filter: blur(2.5px);
+}
+#mainPattionHeading{
+    color: var(--button-background);
+    font-size: 44px;
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+#firstPattionHeading{
+    margin-left: 192px;
+}
+#para{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+#guideLinesContainer{
+    margin-left: 190px;
+}
+#guideLinesContainer li{
+    list-style-type: disc;
+    font-size: 17px;
+}
+
+
+                /* Company center */
+.helpCenter{
+    position: absolute;
+    top: 230%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+}          
+.centerImage{
+    width: 40%;
+    height: 40%;
+    border-radius: 50px;
+}
+.centerDetails{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 300px;
+}
+.colorCenteHeading{
+    color: var(--button-background);
+    font-size: 35px;
+}
+.withoutCenterColorHeading{
+    font-size: 30px;
+    margin-top: -30px;
+}
+.centerContent{
+    font-size: 17px;
+    font-weight: bold;
+    color: gray;
+}
+
+
+             /* Appeals styling */
+
+
+.latestAppeals{
+    position: absolute;
+    top: 320%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
+    height: 130%;
+}       
+.latestAppeals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.latestAppealHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.grayColorLatestHeading{
+    color: gray;
+}
+.headingsOfColors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+}
+.headingsOfColors h1{
+    font-size: 35px;
+}
+.latestColorHeading{
+    color: var(--button-background);
+}
+.appealsBoxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}     
+.appeal{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 110%;
+    background: rgba(209, 207, 207, 0.82);
+    border: 5px solid gray;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: var(--cursor);
+    transition: 1s;
+}
+.appeal:hover{
+    border: 5px solid green;
+}
+.appeal img{
+    height: 300px;
+    width: 350px;
+    margin-top: -10px;
+    animation: appealAni 1s linear;
+}
+.appealName{
+    color: var(--button-background);
+    animation: appealAni 1s linear;
+}
+.appealDetail{
+    text-align: center;
+    animation: appealAni 1s linear;
+}
+.readMoreLink{
+    color: var(--button-background);
+    font-size: 20px;
+    animation: appealAni 1s linear;
+}
+.appealsButtons{
+    width: 200px;
+    transition: 1s;
+    animation: appealAni 1s linear;
+}
+.appealsButtons:hover{
+    background-color: green;
+}
+
+
+          /* funds Styling */
+
+#fundsSection{
+    position: absolute;
+    top: 470%;
+}
+#fundsHeadings{
+    width: 443px;
+}
+.fundsBoxes{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 110%;
+    background: rgba(209, 207, 207, 0.82);
+    cursor: var(--cursor);
+    transition: 1s;
+    background-color: white;
+    border: none;
+    border-radius: none;
+    overflow: hidden;
+    cursor: auto;
+}
+.fundsBoxes img{
+    height: 300px;
+    width: 350px;
+    margin-top: -10px;
+    transition: 0.3s;
+}
+.fundsBoxes img:hover{
+    scale: 1.1;
+}
+
+
+          /* Zakat styling */
+
+
+          
+#zakatSection{
+    top: 610%;
+    flex-direction: column;
+}         
+#zakatHeadings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 245px;
+    margin-bottom: 80px
+}
+#withoutMarginZakatHeading{
+    margin: 0;
+}
+#zakatPicAndDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+} 
+#zakatContent{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 185px;
+}
+#zakatCotnentDetails p{
+    line-height: 3em;
+}
+#zakatButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 480px;
+    margin-top: 10px;
+}
+#zakatButtons :nth-child(1){
+    background-color: green;
+}
+#zakatButtons :nth-child(1):hover{
+    background-color: var(--button-background);
+}
+.zakatDonateButtons{
+    width: 220px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+
+                /* loction Section Styling */
+
+#loction{
+    position: absolute;
+    top: 730%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 120%;
+    background: url(blueBackground.avif) no-repeat center center/cover;
+}
+#loctionHeadings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 58%;
+    padding: 20px;
+}
+#loctionHeadings :nth-child(1){
+    color: black;
+    font-size: 35px;
+}
+#loctionHeadings :nth-child(2){
+    font-size: 35px;
+    color: var(--button-background);
+}
+
+
+
+
+
+                /*footer Section Styling */
+
+
+
+#footer{
+    background-color: #24282c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    position: absolute;
+    top: 860%;
+    color: white;
+    padding: 20px;
+    height: 80%;
+}                
+#footer :nth-child(2) h1{
+    cursor: var(--cursor);
+}
+#footer :nth-child(3) h1{
+    cursor: var(--cursor);
+}
+.headofficeHeadings{
+    font-size: 17px;
+    font-weight: 100;
+}
+.companyHeadoffice{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+}
+#headofficeHeading1{
+    font-size: 30px;
+    color: var(--button-background);
+}
+#headofficeHeading2{
+    font-size: 30px;
+    color: var(--button-background);
+}
+#headofficeHeading3{
+    font-size: 30px;
+    color: var(--button-background);
+}
+#headofficeHeading4{
+    font-size: 30px;
+    color: var(--button-background);
+}
+.companyHeadoffice a img{
+    height: 50px;
+    width: 50px;
+}
+
+
+/*footer Section Styling */
+
+#copyWrite{
+    background-color: black;
+    border-top: 3px solid var(--button-background);
+    position: absolute;
+    top: 940%;
+    width: 100%;
+    padding: 10px;
+}
+#copyWriteContent{
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+.animatedElement{
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.show{
+    opacity: 1;
+}
